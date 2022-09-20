@@ -1,0 +1,57 @@
+* {
+    text-align: center;
+}
+
+body {
+    background-image: linear-gradient(rgb(141,230,147), rgb(199,211,94));
+    background-attachment: fixed;
+}
+
+.chunk {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto; 
+    /*
+    Experimental gap between pixels. 
+    grid-template-columns: 3vw 3vw 3vw 3vw 3vw;
+    grid-template-rows: 3vw 3vw 3vw 3vw 3vw; 
+    */
+}
+
+#overlay {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
+}
+
+.off {
+    background-color: black;
+    border-radius: 50%;
+    height: 1.5vw;
+    width: 1.5vw;
+    display: inline-block;
+}
+
+.on {
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    height: 1.5vw;
+    width: 1.5vw;
+    display: inline-block;
+}
+
+.animate {
+    animation-name: transition;
+    animation-duration: 250ms;
+    transition: width;
+    justify-content: center;
+}
+
+@keyframes transition {
+    50% {
+        width: 0%;
+        margin-left: 42%;
+    }
+}
